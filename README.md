@@ -65,19 +65,7 @@ the world.
 * [CyaSSl(wolfssl)] - If you choose wolfssl as your SSL backend
 * [openssl] - If you choose openssl as your SSL backend
 
-# Deploying the server side
-## Install
-
-    curl https://raw.githubusercontent.com/zhaojh329/rttys/master/install.sh | sudo sh
-
-## Manual run
-
-    rttys -cert /etc/rttys/rttys.crt -key /etc/rttys/rttys.key
-
-
-## Run in background
-
-    sudo /etc/init.d/rttys start
+# [Deploying the server side](https://github.com/zhaojh329/rttys)
 
 # How to build and install the Client - rtty
 ## For Linux distribution, such as Ubuntu and Centos
@@ -106,9 +94,9 @@ Install RTTY
     
     git clone https://github.com/zhaojh329/rtty.git
     cd rtty && cmake . && sudo make install
+    sudo ldconfig
 
-Run RTTY
-Replace the following parameters with your own parameters
+Run RTTY(Replace the following parameters with your own parameters)
 
     sudo rtty -I 'My-device-ID' -h 'your-server' -p 5912 -a -v -s -d 'My Device Description'
 
@@ -162,7 +150,7 @@ You can easily embed RTTY into your existing platform: `https://your-server-host
 Automatic login: `https://your-server:5912/?id=device-id&username=device-username&password=device-password`
 
 ## Upload file and download file
-Open the context menu with the shortcut key: Ctrl+Shift+f
+Open the context menu with the shortcut key: Ctrl + Shift + F
 
 ## Execute a command remote
 ### Shell
